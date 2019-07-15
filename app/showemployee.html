@@ -1,0 +1,21 @@
+<h2 align="center" class="text-info">Show Employee</h2>
+
+
+<table border="1" align="center" class="table table-bordered table-dark">
+    <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Employee Phone No</th>
+    </tr>
+    <tr *ngFor="let emp of empall">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName}}</td>
+        <td>{{emp.empEmail}}</td>
+        <td>{{emp.empPhone}}</td>
+       <td> <input type="button" value="Delete" (click)="empDelete()" class="btn btn-primary"></td>
+       <td> <input type="button" value="Edit" class="btn btn-primary"></td> 
+    </tr>
+    
+ 
+</table>

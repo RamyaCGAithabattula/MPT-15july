@@ -1,0 +1,30 @@
+
+    <form #empForm=ngForm (ngSubmit)="addData()">
+        <h2 class="text-info" align="center">Add Employee</h2>
+        <br><table align="center"  class="table table-bordered table-dark">
+            <tr class="text-info">
+                <td>Employee Id </td>
+                <td><input type="text" class="form-control" name="id" id="eid" [(ngModel)]="empId" #idcontrol="ngModel" required></td>
+                <span class="alert alert-danger" role="alert" *ngIf="idcontrol.touched && idcontrol.invalid"> Id Should Be Filled</span>
+            </tr><br>
+            <tr class="text-info">
+                <td>Name </td>
+                <td><input type="text"class="form-control" name="name" id="ename" [(ngModel)]="empName" #namecontrol="ngModel" required ></td>
+                <span class="alert alert-danger" role="alert" *ngIf="namecontrol.touched && namecontrol.invalid">Name Should Be Filled</span>
+            </tr><br>
+            <tr  class="text-info">
+                <td>Email </td>
+                <td><input type="text" class="form-control" name="econtrol" id="sname" [(ngModel)]="empEmail" #econtrol="ngModel" required ></td>
+                <span class="alert alert-danger" role="alert" *ngIf="econtrol.touched && econtrol.invalid">Email Should Be Filled</span>
+            </tr><br>
+            <tr  class="text-info">
+                <td>phone </td>
+                <td><input type="text" class="form-control" name="d" id="dname" [(ngModel)]="empPhone" #dcontrol="ngModel" required></td>
+                <span class="alert alert-danger" role="alert" *ngIf="dcontrol.touched && dcontrol.invalid"> Phone No Should Be Filled</span>
+            </tr><br>
+            <tr  class="text-info">
+                <td><input type="button" value="ADD" (click)="addData()" class="btn btn-primary"></td>
+            </tr><br>
+        </table><br> <br>
+</form>
+
